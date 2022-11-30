@@ -9,6 +9,7 @@ def get_all_users(request):
   data = []
   for user in response:
    data.append({
+     "id" : user.id,
      "name" : user.user_name,
      "cpf" : user.user_cpf,
      "country" : {
@@ -22,8 +23,10 @@ def get_all_users(request):
 def register_user(request):
   country = Country.manager.country_detail(request.data["country"])
   User.manager.register_user(
+    
    user_name=request.data["name"],
    user_cpf=request.data["cpf"],
    user_country=country
   )
   return Response(request.data)
+
