@@ -1,5 +1,5 @@
 from django.db import models
-from .models import Country
+from countries_app.models import Country
 
 class UserManager(models.Manager):
   def register_user(self, user_name, user_cpf, user_country):

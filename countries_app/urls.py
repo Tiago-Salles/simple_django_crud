@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from countries_app.views import *
 
 urlpatterns = [
  path('all/', get_all_countries, name='all_countries'),

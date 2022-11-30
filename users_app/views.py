@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import User 
+from users_app.models import User 
 
 @api_view(['GET'])
 def get_all_users(request):

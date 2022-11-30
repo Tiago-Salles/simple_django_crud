@@ -1,6 +1,6 @@
-from .models import Country
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from countries_app.models import Country
 
 @api_view(['GET'])
 def get_all_countries(request):
