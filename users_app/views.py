@@ -21,8 +21,6 @@ def get_all_users(request):
 @api_view(['POST'])
 def register_user(request):
   country = Country.manager.country_detail(request.data["country"])
-  print(country)
-  print(request.data["country"])
   User.manager.register_user(
    user_name=request.data["name"],
    user_cpf=request.data["cpf"],

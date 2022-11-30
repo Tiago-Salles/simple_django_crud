@@ -16,7 +16,6 @@ def get_all_countries(request):
  
 @api_view(['POST'])
 def create_new_country(request):
- print(request.data)
  Country.manager.create_country(
   country_name=request.data["country"],
   language=request.data["language"],
