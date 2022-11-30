@@ -10,6 +10,10 @@ class CountryManager(models.Manager):
    countries = self.all()
    return countries
  
+  def country_detail(self, name):
+    country = self.filter(country_name=name).first()
+    return country
+ 
 class Country(models.Model):
   country_name = models.CharField(max_length=50)
   language = models.CharField(max_length=50)
