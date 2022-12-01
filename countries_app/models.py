@@ -10,7 +10,7 @@ class CountryManager(models.Manager):
    countries = self.all()
    return countries
  
-  def country_details(self, name):
+  def get_country_details(self, name):
     country = self.filter(country_name=name).first()
     return country
  
