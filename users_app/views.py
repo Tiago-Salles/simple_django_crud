@@ -19,16 +19,6 @@ def get_all_users(request):
      })
   return Response({"data": data})
 
-@api_view(['POST'])
-def register_user(request):
-  country = Country.manager.country_details(request.data["country"])
-  User.manager.register_user(
-   user_name=request.data["name"],
-   user_cpf=request.data["cpf"],
-   user_country=country
-  )
-  return Response(request.data)
-
 @api_view(['GET'])
 def get_user_details(request, *args, **kwargs):
   user = User.manager.get_user_details(kwargs["userId"])
@@ -41,5 +31,17 @@ def get_user_details(request, *args, **kwargs):
           "language":  user.user_country.language,
       },
   }
-  return Response({"data" : data})
+  return Response({"data": data})
+
+@api_view(['POST'])
+def register_user(request):
+  country = Country.manager.get_country_details(request.data["country"])
+  User.manager.register_user(
+   user_name=request.data["name"],
+   user_cpf=request.data["cpf"],
+   user_country=country
+  )
+  return Response(request.data)
+
+
 
