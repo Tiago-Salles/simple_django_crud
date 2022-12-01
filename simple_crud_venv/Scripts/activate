@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Houseasy - Frontend\Documents\Development\backend_development\python\simple_crud\simple_crud_venv"
+VIRTUAL_ENV="C:\Users\root\Documents\Development\Personal\backend_development\python\simple_django_crud\simple_crud_venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

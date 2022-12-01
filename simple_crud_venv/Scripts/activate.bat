@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Houseasy - Frontend\Documents\Development\backend_development\python\simple_crud\simple_crud_venv
+set VIRTUAL_ENV=C:\Users\root\Documents\Development\Personal\backend_development\python\simple_django_crud\simple_crud_venv
 
 if not defined PROMPT set PROMPT=$P$G
 
